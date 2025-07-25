@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cached" />
+</head>
+
+<body>
+    <div id="notification"></div>
+    <div id="errorNotifcation"></div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/Futurelabs-logo 1.png" alt="Logo">
+        </div>
+        <div class="greetings">
+            <h3>Admin DashBoard</h3>
+            <p>Welcome back,! Your role: <a href="#" class="admin">admin</a></p>
+            <p>Manage talent requests and submissions</p>
+        </div>
+        <div class="btn">
+            <a href="#" class="refresh"><span class="material-symbols-outlined">
+                    cached
+                </span>Refresh</a>
+            <a href="#" class="logout">Logout</a>
+            <button id="addTalent" onclick="openAddModal()">Add Talent</button>
+        </div>
+        <div class="searchbox">
+            <input type="search" id="search" placeholder="Search Request...">
+        </div>
+        <!-- Add Talent Modal -->
+        <div id="addModal">
+            <form id="addForm">
+                <h3>Add New</h3>
+                <input type="text" id="addFirstName" placeholder="First Name" required />
+                <input type="text" id="addLastName" placeholder="Last Name" required />
+                <input type="email" id="addCompanyEmail" placeholder="Company Email" required />
+                <!-- <input type="url" id="addCompanyWebsite" placeholder="Company Website" required /> -->
+                <input type="text" id="addProfession" placeholder="Profession Needed" required />
+                <input type="number" id="addQuantity" placeholder="Quantity Needed" required />
+                <input type="text" id="addContactAddress" placeholder="Contact Address" required />
+                <!-- <input type="text" id="addType" placeholder="Type (e.g. recruiter)" required /> -->
+                <button type="submit">Add Talent</button>
+                <button type="button" onclick="closeAddModal()">Cancel</button>
+            </form>
+        </div>
+
+        <div class="resultBox">
+            <table id="talentTable" aria-label="Talent Requests Table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>PROFESSION</th>
+                        <th>QUANTITY</th>
+                        <th>DATE</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- <td>Final Test</td>
+                        <td>peterime9@gmail.com</td>
+                        <td><span>backend</span></td>
+                        <td>1</td>
+                        <td>May 28, 03:27 PM</td>
+                        <td><button>update</button> <button>delete</button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <p>showing 1 to 1 of 1 results</p>
+                <div class="selection">
+                    <button class="prev">&lt</button><span class="currentPage">1</span><button class="next">&gt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Notification Div -->
+
+    <!-- Update Talent Modal -->
+    <div id="updateModal">
+        <form id="updateForm">
+            <h3>Update</h3>
+            <input type="hidden" id="updateId" />
+            <input type="text" id="updateFirstName" placeholder="First Name" required />
+            <input type="text" id="updateLastName" placeholder="Last Name" required />
+            <input type="email" id="updateCompanyEmail" placeholder="Company Email" required />
+            <input type="text" id="updateProfession" placeholder="Profession Needed" required />
+            <input type="number" id="updateQuantity" placeholder="Quantity Needed" required />
+            <button type="submit">Update Talent</button>
+            <button type="button" onclick="closeUpdateModal()">Cancel</button>
+        </form>
+    </div>
+
+
+    <script src="admin.js" defer></script>
+</body>
+
+</html>

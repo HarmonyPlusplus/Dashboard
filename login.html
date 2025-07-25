@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <p id="notification">Login successful!</p>
+        <div class="logo">
+            <img src="./assets/Futurelabs-logo 1.png" alt="logo">
+        </div>
+        <h1>
+            LOGIN
+        </h1>
+
+        <div>
+            <div class="img">
+                <img src="./assets/man+person+profile+user+icon-1320073176482503236_48px (1).ico" alt="user">
+            </div>
+            <div class="form">
+                <input id="email" type="email" placeholder="E-mail" required>
+                <input id="password" type="password" placeholder="password" required>
+            </div>
+            <div class="reset">
+                <p class="forgot"><a href="reset.html">Reset Password</a></p>
+            </div>
+            <div class="btn">
+                <button id="loginBtn" onclick="login()">LOGIN</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

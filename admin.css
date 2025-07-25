@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdff;
+    font-family: "Poppins", sans-serif;
+}
+
+.greetings {
+    margin: 20px 0 20px 0;
+}
+
+h3 {
+padding-bottom: 8px;
+}
+
+.admin{
+    text-decoration: none;
+    color: blue;
+}
+.admin:hover {
+    text-decoration: underline;
+}   
+
+.btn {
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.refresh{
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  background-color: transparent;
+  color: white;
+  padding: 0px 0px 5px 0px;
+}
+
+.refresh:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.logout {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background-color: #b30000;
+    color: white;
+}
+
+.searchbox{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 60px;
+    background-color: #fff;
+}
+
+#search{
+    width: 50%;
+    height: 70%;
+    font-size: 13px;
+    padding: 10px;
+}
+
+#search::placeholder {
+    color: #999;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.selection {
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+}
+
+.resultBox {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.currentPage {
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    padding: 2px 10px;
+}
+
+.prev, .next {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+span{
+    background-color: lightblue;
+    color: blue;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.action{
+    display: flex;
+    gap: 20px;
+}
+
+.update-btn, .delete-btn{
+    text-decoration: none;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    /* font-weight: bold; */
+}
+.update-btn:hover, .delete-btn:hover {
+    background-color: #0056b3;
+}
+.delete-btn {
+    background-color: red;
+}
+.delete-btn:hover {
+    background-color: #b30000;
+}
+
+#addTalent{
+    text-decoration: none;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+}
+#addTalent:hover {
+    background-color: #00b365;
+}
+
+#addModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*  Modal content box */ 
+#addModal form {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs inside the modal */
+#addModal input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Buttons inside the modal */
+#addModal button {
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Primary (submit) button */
+#addModal button[type="submit"] {
+  background-color: green;
+  color: white;
+}
+
+/* Cancel button */
+#addModal button[type="button"] {
+  background-color: red;
+  color: white;
+}
+
+#updateModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#updateModal form {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#updateModal input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#updateModal button[type="submit"], #updateModal button[type="button"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#updateModal button[type="button"] {
+  background-color: #dc3545;
+}
+
+#notification, #errorNotifcation {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 0.5s;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: fadeIn 1s ease-in forwards;
+}
+#errorNotifcation {
+    background-color: red;
+}
