@@ -1,4 +1,4 @@
-*{
+*, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@
     padding: 20px;
     background-color: #fdfdff;
     font-family: "Poppins", sans-serif;
+    height: 100vh;
 }
 
 .greetings {
@@ -201,7 +202,7 @@ span{
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -212,7 +213,7 @@ span{
   padding: 30px 20px;
   border-radius: 10px;
   width: 50%;
-  max-width: 400px;
+  max-width: 320px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -305,7 +306,7 @@ span{
     left: 50%;
     transform: translateX(-50%);
     animation: fadeIn 0.5s;
-    width: 50%;
+    width: 90%;
     margin: 0px auto;
     text-align: center;
     background-color: #4CAF50;
