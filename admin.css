@@ -3,15 +3,20 @@
     margin: 0;
     padding: 0;
 }
+html, body {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 .container {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fdfdff;
     font-family: "Poppins", sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 
 .greetings {
@@ -97,7 +102,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 th, td {
@@ -116,7 +121,7 @@ th {
     padding: 0 10px;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .selection {
@@ -197,12 +202,12 @@ span{
 #addModal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    /* overflow: auto; */
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -212,12 +217,12 @@ span{
   background-color: white;
   padding: 30px 20px;
   border-radius: 10px;
-  width: 50%;
+  width: 100%;
   max-width: 320px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 /* Inputs inside the modal */
