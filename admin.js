@@ -243,7 +243,7 @@ document.querySelector('.logout').onclick = () => {
   if (confirm('Are you sure you want to logout?')) {
     // ✅ Remove token on logout
     localStorage.removeItem('authToken');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   }
 };
 
